@@ -24,29 +24,27 @@
             border-bottom:1px dashed red; padding-bottom: 10px;
         }
         /*Phần menu ngang tao bang CSS*/
-        .icon-bar {
-            float: left;
-            padding-left: 18px;
-            border-right: 1px solid #68092d;
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
         }
-        .icon-bar a {
+        li {
             float: left;
-            border-right: 1px solid #68092d;
-            height: 40px;
-            padding: 10px 5px 0px 5px;
-            width: auto;
-            text-align: center;
+            background-color: #8C0209;
+            border-right:1px solid #68092d;
+        }
+        li:last-child {
+            border-right: none;
+        }
+        li a {
+            display: block;
+            padding: 14px 16px;
             color: white;
-            font-size: 12pt;
-            text-decoration: none;
+            text-align: center;
         }
-        .icon{
-            float:left;
-            margin-top: 5px;
-            margin-right: 5px;
-            height: 15px;
-        }
-        .icon-bar a:hover {
+        li a:hover:not(.active) {
             background-color: #c4151f;
         }
     </style>
@@ -55,53 +53,58 @@
         font-family: 'Helvetica Neue', 'Lucida Grande', 'Segoe UI', Arial, Helvetica, Verdana, sans-serif;
     font-size:0.875em;text-align: justify;">
 <!--Phan Header-->
-<header id="header"
-     style="width:1000px; height:100px; margin:0 auto; background-color:#FFFFFF; background-image: url(images/img01.jpg);
+<div id="header"
+     style="width:1000px; height:100px; margin:0 auto; background-color:#FFFFFF; background-image: url(../images/img01.jpg);
      /*background-image: url(image1.jpg);*/
 background-repeat: no-repeat;
 background-position: right top; border:1px solid #8C0209;">
     <div id="logo" style="width:1000px; height:100px;">
         <div style="float:left">
-            <h1 style="padding:10px 0px 0px 90px; text-shadow: 3px 3px 3px #b9a698">
+            <h1 style="padding:10px 0px 0px 90px">
                 <span style="font-weight: bold">Shop</span>
                 <span style="color: red; font-weight: bold">Thiên Thanh</span>
             </h1></div>
         <div style="float:left"><h1 style="padding:30px 0px 0px 0px; color: darkolivegreen; font-size:small">THỜI TRANG NAM NỮ</h1></div>
     </div>
-</header>
+</div>
 <!--Het phan Header-->
 
 <!--Phan menu-->
-<nav id="menuContainer" style="width:1000px; margin:0 auto; background-color:#FFFFFF;">
-    <div id="menu" style="width:990px; margin:0 auto; height:50px; font-weight: bold; color: white; background: url(images/img02.jpg); background-size: 990px 50px">
-            <div class="icon-bar">
-            <a href="#Trangchu">Trang chủ</a>
-            <a href="#Quanaonu">Quần áo nữ</a>
-            <a href="#Quanaonam">Quần áo nam</a>
-            <a href="#Phukien">Phụ kiện</a>
-            <a href="#Tintuc">Tin tức & sự kiện</a>
-            <a href="#Lienhe">
-                <img class="icon" src="images/Email.gif"/>
-                <div style="float:left">Liên hệ</div>
-            </a>
-            </div>
-            <div style="float:left; margin: 15px 0px 0px 90px; background-color: #ffffff">
-                <form>
-                    <img src="images/Search2.png" style="float:right"/>
-                    <input type="text" name="search" placeholder="Search..">
-                </form>
-            </div>
+<div id="menuContainer" style="width:1000px; margin:0 auto; background-color:#FFFFFF;">
+    <div id="menu" style="width:990px; margin:0 auto; height:50px; font-weight: bold; color: white;">
+        <div style="float:left">
+            <img src="../images/border-left1.gif"/>
+        </div>
+        <div style="float:right">
+            <img src="../images/border-right1.gif"/>
+        </div>
+        <div style="background-color: #890208; width: 950px; height:50px; float:left">
+        <ul style="float:left">
+            <li><a href="#Trangchu">Trang chủ</a></li>
+            <li><a href="#Quanaonu">Quần áo nữ</a></li>
+            <li><a href="#Quanaonam">Quần áo nam</a></li>
+            <li><a href="#Phukien">Phụ kiện</a></li>
+            <li><a href="#Tintuc">Tin tức</a></li>
+            <li><a href="#Sukien">Sự kiện</a></li>
+        </ul>
+        <div style="float:left; margin: 15px 0px 0px 150px; background-color: #ffffff">
+            <form>
+                <img src="../images/Search2.png" style="float:right"/>
+                <input type="text" name="search" placeholder="Search..">
+            </form>
+        </div>
+        </div>
     </div>
-</nav>
+</div>
 <!--Het phan menu-->
 
 <!--Phan MainContainer-->
-<section id="mainContainer" style="width:990px; margin:0 auto; background-color:#FFFFFF; border:1px solid #8C0209; padding:20px 5px 0px 5px">
+<div id="mainContainer" style="width:990px; margin:0 auto; background-color:#FFFFFF; border:1px solid #8C0209; padding:20px 5px 0px 5px">
     <!--Phan SideBar-->
-    <aside id="sidebar1" style="width:220px; font-size:12px; float:left;">
+    <div id="sidebar1" style="width:220px; font-size:12px; float:left;">
         <!--Muc San pham moi-->
         <div class="subsidebar">
-            <div class="bar_title" style="height:40px; font-weight: bold; background-image: url(images/img05.jpg); color:#ffffff;">
+            <div class="bar_title" style="height:40px; font-weight: bold; background-image: url(../images/img05.jpg); color:#ffffff;">
                 <div style="padding:10px 0px 0px 15px">Sản phẩm mới</div>
             </div>
             <!--Các mục chọn-->
@@ -122,12 +125,12 @@ background-position: right top; border:1px solid #8C0209;">
 
         <!--Muc Ho tro truc tuyen-->
         <div class="subsidebar" style="border:1px solid #9a1838; margin-top:20px">
-            <div class="bar_title" style="height:40px; background-image: url(images/img05.jpg); font-weight: bold; color:#FFFFFF; margin-top:-20px">
+            <div class="bar_title" style="height:40px; background-image: url(../images/img05.jpg); font-weight: bold; color:#FFFFFF; margin-top:-20px">
                 <div style="padding:10px 0px 0px 15px">Hỗ trợ trực tuyến</div>
             </div>
             <div class="subframe">
                 <div align="center">
-                    <img src="images/Yahoo.png">
+                    <img src="../images/Yahoo.png">
                 </div>
                 <p style="font-weight:bold; color:red; text-align:center">Hotline: 0914 024 357</p>
             </div>
@@ -136,7 +139,7 @@ background-position: right top; border:1px solid #8C0209;">
 
         <!--Muc Thong ke-->
         <div class="subsidebar" style="border:1px solid #9a1838; margin-top:45px;">
-            <div class="bar_title" style="height:40px; background-image: url(images/img05.jpg); font-weight: bold; color:#FFFFFF; margin-top:-20px">
+            <div class="bar_title" style="height:40px; background-image: url(../images/img05.jpg); font-weight: bold; color:#FFFFFF; margin-top:-20px">
                 <div style="padding:10px 0px 0px 15px">Thống kê</div>
             </div>
             <div class="subframe" style="color:red">
@@ -145,13 +148,13 @@ background-position: right top; border:1px solid #8C0209;">
             </div>
         </div>
         <!--Het muc Thong ke-->
-    </aside>
+    </div>
     <!--Het phan SideBar-->
 
     <!--Phan Maincontent-->
     <div id="maincontent" style="float:left;width:770px;">
         <!--Muc Baner quan cao-->
-        <div id="banner" style="height:400px; margin-left:20px; background-image: url(images/Cuahang_01.jpg);background-repeat: no-repeat;">
+        <div id="banner" style="height:400px; margin-left:20px; background-image: url(../images/Cuahang_01.jpg);background-repeat: no-repeat;">
             <p style="float:right; margin-top:0px; color:red; font-weight:bold; background-color:#f9f8f8;">&#171&#171Cửa hàng của chúng tôi&#187&#187</p>
         </div>
         <!--Het muc Baner quan cao-->
@@ -164,19 +167,19 @@ background-position: right top; border:1px solid #8C0209;">
             </div>
             <div class="hotimg" style="margin-top:4px;">
                 <!--Danh sách hình các sản phẩm HOT-->
-                <img src="images/Moi_04.jpg" style="width:103px;height:180px">
-                <img src="images/Moi_03.jpg" style="width:103px;height:180px">
-                <img src="images/Moi_07.jpg" style="width:103px;height:180px">
-                <img src="images/Moi_06.jpg" style="width:103px;height:180px">
-                <img src="images/Moi_09.jpg" style="width:103px;height:180px">
-                <img src="images/Moi_10.jpg" style="width:103px;height:180px">
-                <img src="images/Moi_11.jpg" style="width:103px;height:180px">
+                <img src="../images/Moi_04.jpg" style="width:103px;height:180px">
+                <img src="../images/Moi_03.jpg" style="width:103px;height:180px">
+                <img src="../images/Moi_07.jpg" style="width:103px;height:180px">
+                <img src="../images/Moi_06.jpg" style="width:103px;height:180px">
+                <img src="../images/Moi_09.jpg" style="width:103px;height:180px">
+                <img src="../images/Moi_10.jpg" style="width:103px;height:180px">
+                <img src="../images/Moi_11.jpg" style="width:103px;height:180px">
             </div>
         </div>
         <!--Het muc Thoi trang HOT-->
 
         <!--Muc Bai viet gioi thieu ngan gon-->
-        <article id="article" style="padding-bottom:0px; line-height:200%; padding-left:20px;">
+        <div id="article" style="padding-bottom:0px; line-height:200%; padding-left:20px;">
             <h1 style="color:red;">Chào mừng bạn đến với shop quần áo rẻ đẹp!</h1>
             <h3 style="color:red;">Hãy thỏa sức shopping online cùng shop quần áo rẻ đẹp nhé</h3>
             <p style="padding-left:20px;">
@@ -186,7 +189,7 @@ background-position: right top; border:1px solid #8C0209;">
                 thanh lịch lại vừa rất trẻ trung, duyên dáng, sành điệu… đó chính là điều
                 mà Shop <span style="font-weight: bold;">Thiên Thanh</span> muốn giới thiệu với các bạn.<br/></p>
             <p style="float:right; color:red; font-weight:bold; background-color:#f9f8f8;">&#171&#171Xem chi tiết&#187&#187</p>
-        </article>
+        </div>
         <!--Het muc Bai viet gioi thieu ngan gon-->
 
         <!--Muc thoi trang nam-->
@@ -200,10 +203,10 @@ background-position: right top; border:1px solid #8C0209;">
                 <!--Hình 1-->
                 <div class="sanpham">
                     <div>
-                        <img class="hinhdemo" src="images/Nam_01.jpg">
+                        <img class="hinhdemo" src="../images/Nam_01.jpg">
                         <p style="padding:0px; color: red">Quần kiểu lạ Men 10</p>
                         <div>
-                            <img class="hinhgiohang" src="images/cart2.png">
+                            <img class="hinhgiohang" src="../images/cart2.png">
                             300.000
                         </div>
                     </div>
@@ -211,10 +214,10 @@ background-position: right top; border:1px solid #8C0209;">
                 <!--Hình 2-->
                 <div class="sanpham">
                     <div>
-                        <img class="hinhdemo" src="images/Nam_02.jpg">
+                        <img class="hinhdemo" src="../images/Nam_02.jpg">
                         <p style="padding:0px; color: red">Áo sơmi body Ms 01</p>
                         <div>
-                            <img class="hinhgiohang" src="images/cart2.png">
+                            <img class="hinhgiohang" src="../images/cart2.png">
                             350.000
                         </div>
                     </div>
@@ -222,10 +225,10 @@ background-position: right top; border:1px solid #8C0209;">
                 <!--Hình 3-->
                 <div class="sanpham">
                     <div>
-                        <img class="hinhdemo" src="images/Nam_03.jpg">
+                        <img class="hinhdemo" src="../images/Nam_03.jpg">
                         <p style="padding:0px; color: red">Áo sơmi body Ms 09</p>
                         <div>
-                            <img class="hinhgiohang" src="images/cart2.png">
+                            <img class="hinhgiohang" src="../images/cart2.png">
                             450.000
                         </div>
                     </div>
@@ -233,10 +236,10 @@ background-position: right top; border:1px solid #8C0209;">
                 <!--Hình 4-->
                 <div class="sanpham">
                     <div>
-                        <img class="hinhdemo" src="images/Nam_04.jpg">
+                        <img class="hinhdemo" src="../images/Nam_04.jpg">
                         <p style="padding:0px; color: red">Quần nam Rock & Repulic</p>
                         <div>
-                            <img class="hinhgiohang" src="images/cart2.png">
+                            <img class="hinhgiohang" src="../images/cart2.png">
                             1.300.000
                         </div>
                     </div>
@@ -244,10 +247,10 @@ background-position: right top; border:1px solid #8C0209;">
                 <!--Hình 5-->
                 <div class="sanpham">
                     <div>
-                        <img class="hinhdemo" src="images/Nam_05.jpg">
+                        <img class="hinhdemo" src="../images/Nam_05.jpg">
                         <p style="padding:0px; color: red">Áo kiểu lạ Men 10</p>
                         <div>
-                            <img class="hinhgiohang" src="images/cart2.png">
+                            <img class="hinhgiohang" src="../images/cart2.png">
                             250.000
                         </div>
                     </div>
@@ -255,10 +258,10 @@ background-position: right top; border:1px solid #8C0209;">
                 <!--Hình 6-->
                 <div class="sanpham">
                     <div>
-                        <img class="hinhdemo" src="images/Nam_06.jpg">
+                        <img class="hinhdemo" src="../images/Nam_06.jpg">
                         <p style="padding:0px; color: red">Áo sơmi body Ms 03</p>
                         <div>
-                            <img class="hinhgiohang" src="images/cart2.png">
+                            <img class="hinhgiohang" src="../images/cart2.png">
                             300.000
                         </div>
                     </div>
@@ -266,10 +269,10 @@ background-position: right top; border:1px solid #8C0209;">
                 <!--Hình 7-->
                 <div class="sanpham">
                     <div>
-                        <img class="hinhdemo" src="images/Nam_07.jpg">
+                        <img class="hinhdemo" src="../images/Nam_07.jpg">
                         <p style="padding:0px; color: red">Quần kaki nam Ms 01</p>
                         <div>
-                            <img class="hinhgiohang" src="images/cart2.png">
+                            <img class="hinhgiohang" src="../images/cart2.png">
                             700.000
                         </div>
                     </div>
@@ -277,10 +280,10 @@ background-position: right top; border:1px solid #8C0209;">
                 <!--Hình 8-->
                 <div class="sanpham">
                     <div>
-                        <img class="hinhdemo" src="images/Nam_08.jpg">
+                        <img class="hinhdemo" src="../images/Nam_08.jpg">
                         <p style="padding:0px; color: red">Quần đùi short Ms 01</p>
                         <div>
-                            <img class="hinhgiohang" src="images/cart2.png">
+                            <img class="hinhgiohang" src="../images/cart2.png">
                             500.000
                         </div>
                     </div>
@@ -291,20 +294,20 @@ background-position: right top; border:1px solid #8C0209;">
     </div>
     <!--Het phan Maincontent-->
     <div style="clear:both;">&nbsp;</div>
-</section>
+</div>
 <!--Het phan MainContainer-->
 
 <!--Phan Footer-->
-<footer id="footer" style="width:960px; height:70px; margin:0 auto; padding:0 20px; background-color:#FFFFFF; border:1px solid #8C0209;
-background-image: url(images/img04.jpg)">
+<div id="footer" style="width:960px; height:70px; margin:0 auto; padding:0 20px; background-color:#FFFFFF; border:1px solid #8C0209;
+background-image: url(../images/img04.jpg)">
     <div style="float:left">
         <p>&copy;2009 All Rights Reserved &#9899 Design by <span style="color:red; ">Alphatek Company</span></p>
     </div>
     <div style="float:right; margin-top:10px">
-        <img src="images/facebook.png" style="width: 37px">
-        <img src="images/youTube.png" style="width: 37px;">
+        <img src="../images/facebook.png" style="width: 37px">
+        <img src="../images/youTube.png" style="width: 37px;">
     </div>
-</footer>
+</div>
 <!--Het phan Footer-->
 
 </body>
